@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f1f1f1;
+    background: #77a88d;
     display: flex;
     flex-flow: column;
     min-height: 100vh;
@@ -19,3 +19,41 @@ main {
 .card {
     margin: 1rem;
 }
+
+#sidebar {
+    border-right: 1px solid white;
+}
+
+.navbar-brand {
+    color: white;
+    padding-left: 10px;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar {
+    border-bottom: 1px solid white;
+}
+
+#sidebtn {
+    margin: 1rem;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    background: #77a88d;
+    padding: 18px 30px;
+    border: 3px solid white;
+    box-shadow: 0 5px 0 white;
+    border-radius: 6px;
+    display: inline-block;
+    transition: .3s;
+    text-decoration: none;
+  }
+
+  #sidebtn:hover {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 white;
+    color: white;
+  }
