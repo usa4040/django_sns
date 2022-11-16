@@ -1,0 +1,19 @@
+{% extends 'base_app.html' %}
+
+{% block content %}
+
+{% for item in object_list %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</h5>
+        <p class="card-text">{{ item.content }}</p>
+        <a href="{% url 'detail' item.pk %}">詳細</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+
+
+

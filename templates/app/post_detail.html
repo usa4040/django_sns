@@ -1,0 +1,13 @@
+{% extends 'base_app.html' %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ object.user.user_name }}&emsp;{{ object.created_at }}</h5>
+        <p class="card-text">{{ object.content }}</p>
+        <a href="{% url 'update' object.pk %}">編集</a>
+        <a href="{% url 'delete' object.pk %}">消去</a>
+    </div>
+</div>
+{% endblock %}
