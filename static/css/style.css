@@ -9,19 +9,7 @@ body {
     background: #77a88d;
     display: flex;
     flex-flow: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-.card {
-    margin: 1rem;
-}
-
-#sidebar {
-    border-right: 1px solid white;
+    height: 100vh;
 }
 
 .navbar-brand {
@@ -35,6 +23,33 @@ main {
 
 .navbar {
     border-bottom: 1px solid white;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+main {
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.card {
+    margin: 1rem;
+}
+
+#left_sidebar {
+    position: sticky;
+    top: 50px;
+    height: 600px;
+    z-index: 99;
+}
+
+#right_sidebar {
+    position: sticky;
+    top: 50px;
+    height: 600px;
+    z-index: 99;
 }
 
 #sidebtn {
