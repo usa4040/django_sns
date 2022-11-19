@@ -24,31 +24,49 @@ body {
 .navbar {
     background-color: #77a88d;
     border-bottom: 1px solid white;
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 100;
 }
 
 main {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    position: relative;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
     margin: 1rem;
 }
 
+.card-title {
+    color: black;
+}
+
+.card-text {
+    color: black;
+}
+
+#card-box {
+    text-decoration: none;
+}
+
 #left_sidebar {
-    position: sticky;
+    position: fixed;
     top: 50px;
-    height: 600px;
+    left: 10%;
+    height: 100%;
+    border-right: 1px solid white;
     z-index: 99;
 }
 
 #right_sidebar {
-    position: sticky;
+    position: fixed;
     top: 50px;
-    height: 600px;
+    right: 10%;
+    height: 100%;
+    border-left: 1px solid white;
     z-index: 99;
 }
 
