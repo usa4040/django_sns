@@ -5,14 +5,15 @@
 
 {% for item in object_list %}
 <div class="card">
-    <div class="card-body">
-        <p class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
-        {% if item.post_image %}
-        <img src="{{ item.post_image.url }}" class="img-thumbnail">
-        {% endif %}
-        <p class="card-text">{{ item.content }}</p>
-        <a href="{% url 'detail' item.pk %}">詳細</a>
-    </div>
+    <a id="card-box" href="{% url 'detail' item.pk %}">
+        <div class="card-body">
+            <p class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
+            {% if item.post_image %}
+            <img src="{{ item.post_image.url }}" class="img-thumbnail">
+            {% endif %}
+            <p class="card-text">{{ item.content }}</p>
+        </div>
+    </a>
 </div>
 {% endfor %}
 
