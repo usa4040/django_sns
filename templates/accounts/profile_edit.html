@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 
 {% block content %}
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <table class="profile_table mb-4">
         <tbody>
@@ -23,6 +23,12 @@
                 <th class="header">所属</th>
                 <td class="data">
                     {% render_field form.department class='form-control' placeholder='所属' %}
+                </td>
+            </tr>
+            <tr>
+                <th class="header">プロフィール画像</th>
+                <td class="data">
+                    {% render_field form.picture class='form-control' %}
                 </td>
             </tr>
         </tbody>

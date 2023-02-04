@@ -38,6 +38,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     user_name = models.CharField('ユーザーネーム', max_length=30)
     department = models.CharField('所属', max_length=30, blank=True)
     created = models.DateField('入会日', default=timezone.now)
+    picture = models.ImageField('プロフィール画像', upload_to='profile/', blank=True)
     is_staff = models.BooleanField(
         ("staff status"),
         default=False,
