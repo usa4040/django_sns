@@ -26,6 +26,7 @@ class ProfileEditView(LoginRequiredMixin, View):
                 'last_name' : user_data.last_name,
                 'user_name' : user_data.user_name,
                 'department' : user_data.department,
+                'picture' : user_data.picture,
             }
         )
 
@@ -34,13 +35,14 @@ class ProfileEditView(LoginRequiredMixin, View):
         })
 
     def post(self, request, *args, **kwargs):
-        form = ProfileForm(request.POST or None)
+        form = ProfileForm(request.POST or None, request.FILES)
         if form.is_valid():
             user_data = CustomUser.objects.get(id=request.user.id)
             user_data.first_name = form.cleaned_data['first_name']
             user_data.last_name = form.cleaned_data['last_name']
             user_data.user_name = form.cleaned_data['user_name']
             user_data.department = form.cleaned_data['department']
+            user_data.picture = form.cleaned_data['picture']
             user_data.save()
             return redirect('profile')
 

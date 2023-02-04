@@ -9,7 +9,7 @@
         <div class="card-body">
             <p class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
             {% if item.post_image %}
-            <img src="{{ item.post_image.url }}" class="img-thumbnail">
+            <a href="{{ item.post_image.url }}" data-lightbox="group"><img src="{{ item.post_image.url }}" class="img-thumbnail" width="300px"></a>
             {% endif %}
             <p class="card-text">{{ item.content }}</p>
         </div>
