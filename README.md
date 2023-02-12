@@ -1,4 +1,4 @@
-# django_sns
+# djangoでSNSを作ってみる
 
 OS Mac
 
