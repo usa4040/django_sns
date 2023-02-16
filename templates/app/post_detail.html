@@ -21,8 +21,8 @@
     </div>
     <div class="card-body">
         <p class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
-        {% if item.post_image %}
-        <img src="{{ item.post_image.url }}" class="img-thumbnail">
+        {% if post.post_image %}
+        <img src="{{ post.post_image.url }}" class="img-thumbnail">
         {% endif %}
         <p class="card-text">{{ object.content }}</p>
         <a href="{% url 'update' object.pk %}">編集</a>
