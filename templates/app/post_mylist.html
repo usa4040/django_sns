@@ -7,11 +7,12 @@
 <div class="card">
     <a id="card-box" href="{% url 'detail' item.pk %}">
         <div class="card-body">
-            <p class="card-title">{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
-            {% if item.post_image %}
-            <a href="{{ item.post_image.url }}" data-lightbox="group"><img src="{{ item.post_image.url }}" class="img-thumbnail" width="300px"></a>
-            {% endif %}
+            <p class="card-title"><img src="/media/{{ item.user.picture }}" style="border-radius: 100px; width: 30px; height: 30px;">
+                &nbsp;{{ item.user.user_name }}&emsp;{{ item.created_at }}</p>
             <p class="card-text">{{ item.content }}</p>
+            {% if item.post_image %}
+            <a href="{{ item.post_image.url }}" data-lightbox="group"><img src="{{ item.post_image.url }}" class="img-thumbnail" width="200px" height="200px"></a>
+            {% endif %}
         </div>
     </a>
 </div>
