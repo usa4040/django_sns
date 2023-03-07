@@ -2,7 +2,7 @@
 
 OS Mac
 
-言語 python フレームワーク django
+言語 python フレームワーク django　データベース sqlite
 
 機能　ログイン、ログアウト、投稿（編集、消去も可）
 
